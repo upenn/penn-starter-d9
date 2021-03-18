@@ -14,6 +14,8 @@
         "drupal/core-recommended": "^8.8 || ^9",
         "pantheon-systems/drupal-integrations": "^8 || ^9",
         "cweagans/composer-patches": "^1.0",
-        "zaporylie/composer-drupal-optimizations": "^1.2"
-    }
+        "zaporylie/composer-drupal-optimizations": "^1.2",
+        "drupal/radix": "^4.10"
+    },
+    "version": "1.0.1"
 }
