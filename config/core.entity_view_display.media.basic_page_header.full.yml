@@ -1,0 +1,30 @@
+uuid: 54870103-ce87-49fa-9a6c-26b5a4254b8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.full
+    - field.field.media.basic_page_header.field_media_image_2
+    - image.style.basic_page_header_desktop
+    - media.type.basic_page_header
+  module:
+    - image
+id: media.basic_page_header.full
+targetEntityType: media
+bundle: basic_page_header
+mode: full
+content:
+  field_media_image_2:
+    label: hidden
+    weight: 0
+    settings:
+      image_style: basic_page_header_desktop
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

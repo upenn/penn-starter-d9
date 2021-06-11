@@ -1,0 +1,8 @@
+uuid: 13b01a8a-fc7a-40a7-9987-983893d5f2b6
+langcode: en
+status: true
+dependencies: {  }
+id: featured_date
+label: 'Featured Date'
+locked: false
+pattern: 'j M Y'

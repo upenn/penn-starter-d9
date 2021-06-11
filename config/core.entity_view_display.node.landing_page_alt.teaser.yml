@@ -1,0 +1,36 @@
+uuid: be913075-2a9d-4c1b-96b1-6a43c19a5aab
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.landing_page_alt.body
+    - field.field.node.landing_page_alt.field_callout_box
+    - field.field.node.landing_page_alt.field_header_image
+    - field.field.node.landing_page_alt.field_overview_text
+    - node.type.landing_page_alt
+  module:
+    - text
+    - user
+id: node.landing_page_alt.teaser
+targetEntityType: node
+bundle: landing_page_alt
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_callout_box: true
+  field_header_image: true
+  field_overview_text: true

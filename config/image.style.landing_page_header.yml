@@ -1,0 +1,15 @@
+uuid: e6217dce-c430-4e28-8f26-e113308accbe
+langcode: en
+status: true
+dependencies: {  }
+name: landing_page_header
+label: 'Landing Page Header'
+effects:
+  93ce5335-327d-44b2-980b-78fa14f698c6:
+    uuid: 93ce5335-327d-44b2-980b-78fa14f698c6
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1420
+      height: 500
+      anchor: center-center

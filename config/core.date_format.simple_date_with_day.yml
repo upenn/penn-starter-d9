@@ -1,0 +1,8 @@
+uuid: 20f22133-3f30-4462-aa2b-e4e9183f62a1
+langcode: en
+status: true
+dependencies: {  }
+id: simple_date_with_day
+label: 'Simple Date with Day'
+locked: false
+pattern: 'l, F d Y'

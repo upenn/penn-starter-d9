@@ -1,0 +1,15 @@
+uuid: e43032d9-31a3-4293-99f3-33a32d231e31
+langcode: en
+status: true
+dependencies: {  }
+name: headshot
+label: Headshot
+effects:
+  42da6ab8-4a3c-4e31-831c-49291d1891e3:
+    uuid: 42da6ab8-4a3c-4e31-831c-49291d1891e3
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 250
+      height: 250
+      anchor: center-center

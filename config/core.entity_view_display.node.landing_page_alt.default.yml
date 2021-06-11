@@ -1,0 +1,55 @@
+uuid: d98efb6a-2703-4d59-96d3-d11a18db6d80
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.landing_page_alt.body
+    - field.field.node.landing_page_alt.field_callout_box
+    - field.field.node.landing_page_alt.field_header_image
+    - field.field.node.landing_page_alt.field_overview_text
+    - node.type.landing_page_alt
+  module:
+    - text
+    - user
+id: node.landing_page_alt.default
+targetEntityType: node
+bundle: landing_page_alt
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_callout_box:
+    weight: 103
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_header_image:
+    type: entity_reference_entity_view
+    weight: 104
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_overview_text:
+    weight: 102
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

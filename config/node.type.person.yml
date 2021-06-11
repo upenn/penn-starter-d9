@@ -1,0 +1,18 @@
+uuid: 834cd54d-02ab-4f28-b669-7789b1774464
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Person
+type: person
+description: 'A flexible content type for staff and personnel listings'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

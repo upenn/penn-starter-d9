@@ -1,0 +1,13 @@
+uuid: b103fdf2-cc31-4a18-b1cb-71a16f89f17a
+langcode: en
+status: true
+dependencies: {  }
+id: landing_page_header
+label: 'Landing Page Header'
+description: ''
+source: image
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_image
+field_map: {  }

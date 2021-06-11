@@ -1,0 +1,13 @@
+uuid: 8b4c7ac7-c507-4f37-8880-b389ce1b005c
+langcode: en
+status: true
+dependencies: {  }
+id: basic_page_header
+label: 'Basic Page Header'
+description: ''
+source: image
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_image_2
+field_map: {  }

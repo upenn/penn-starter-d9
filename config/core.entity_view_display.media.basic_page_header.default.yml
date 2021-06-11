@@ -1,0 +1,29 @@
+uuid: 87024915-451f-4387-a0fb-53191482d413
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.basic_page_header.field_media_image_2
+    - image.style.basic_page_header_desktop
+    - media.type.basic_page_header
+  module:
+    - image
+id: media.basic_page_header.default
+targetEntityType: media
+bundle: basic_page_header
+mode: default
+content:
+  field_media_image_2:
+    label: hidden
+    weight: 0
+    settings:
+      image_style: basic_page_header_desktop
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

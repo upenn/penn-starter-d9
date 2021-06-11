@@ -1,0 +1,21 @@
+uuid: 0f6a9eab-8982-4250-ae16-385aae9d2315
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - views
+    - viewsreference
+id: node.field_sidebar
+field_name: field_sidebar
+entity_type: node
+type: viewsreference
+settings:
+  target_type: view
+module: viewsreference
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

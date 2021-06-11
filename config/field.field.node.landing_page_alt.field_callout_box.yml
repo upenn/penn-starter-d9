@@ -1,0 +1,21 @@
+uuid: 2b68938f-d986-4658-a2dc-2bf771a5fb3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_callout_box
+    - node.type.landing_page_alt
+  module:
+    - text
+id: node.landing_page_alt.field_callout_box
+field_name: field_callout_box
+entity_type: node
+bundle: landing_page_alt
+label: 'Callout Box'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

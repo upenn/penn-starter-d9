@@ -1,0 +1,28 @@
+uuid: 8ddb6df4-5af1-4e1e-affd-2b89784c73d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_main_header_image
+    - media.type.basic_page_header
+    - node.type.event
+id: node.event.field_main_header_image
+field_name: field_main_header_image
+entity_type: node
+bundle: event
+label: 'Main Header Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      basic_page_header: basic_page_header
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

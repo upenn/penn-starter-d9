@@ -1,0 +1,48 @@
+uuid: 066fcdb5-5b30-482e-b691-978fa7de66b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_attach_a_listing_view
+    - node.type.listing_page
+  module:
+    - viewsreference
+id: node.listing_page.field_attach_a_listing_view
+field_name: field_attach_a_listing_view
+entity_type: node
+bundle: listing_page
+label: 'Attach a listing view'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: 0
+  plugin_types:
+    block: block
+    default: 0
+    page: 0
+    feed: 0
+  preselect_views:
+    events: events
+    news: news
+    block_content: 0
+    comment: 0
+    comments_recent: 0
+    content: 0
+    content_recent: 0
+    files: 0
+    frontpage: 0
+    landing_test: 0
+    media: 0
+    media_library: 0
+    taxonomy_term: 0
+    user_admin_people: 0
+    watchdog: 0
+    who_s_new: 0
+    who_s_online: 0
+field_type: viewsreference

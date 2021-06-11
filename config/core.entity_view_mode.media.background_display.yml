@@ -1,0 +1,10 @@
+uuid: 2ffc3369-8208-42c0-bba7-26998aa9f211
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.background_display
+label: 'Background Display'
+targetEntityType: media
+cache: true

@@ -1,0 +1,30 @@
+uuid: 947d0be5-ece7-449b-adf5-6062ecf01424
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.landing_page_header.field_media_image
+    - image.style.medium
+    - media.type.landing_page_header
+  module:
+    - image
+id: media.landing_page_header.media_library
+targetEntityType: media
+bundle: landing_page_header
+mode: media_library
+content:
+  thumbnail:
+    type: image
+    label: hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    weight: 0
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_media_image: true
+  name: true
+  uid: true

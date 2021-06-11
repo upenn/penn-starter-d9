@@ -1,0 +1,167 @@
+uuid: 2bd97341-25e8-4cfd-b09b-5db7fe22704c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.event.body
+    - field.field.node.event.field_end_date
+    - field.field.node.event.field_event_time
+    - field.field.node.event.field_event_type
+    - field.field.node.event.field_location
+    - field.field.node.event.field_main_header_image
+    - field.field.node.event.field_registration_link
+    - field.field.node.event.field_sidebar
+    - field.field.node.event.field_start_date
+    - node.type.event
+  module:
+    - datetime
+    - ds
+    - link
+    - text
+    - time_field
+    - user
+    - viewsreference
+third_party_settings:
+  ds:
+    layout:
+      id: bs_3col_stacked
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          top:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+          left:
+            wrapper: div
+            classes:
+              col-lg-3: col-lg-3
+            add_region_classes: 1
+            attributes: ''
+          middle:
+            wrapper: div
+            classes:
+              col-lg-6: col-lg-6
+            add_region_classes: 1
+            attributes: ''
+          right:
+            wrapper: div
+            classes:
+              col-lg-3: col-lg-3
+            add_region_classes: 1
+            attributes: ''
+          bottom:
+            wrapper: div
+            classes:
+              col-sm-12: col-sm-12
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      left:
+        - field_start_date
+        - field_end_date
+        - field_event_time
+        - field_location
+        - field_registration_link
+      middle:
+        - links
+        - field_main_header_image
+        - body
+      right:
+        - field_sidebar
+id: node.event.full
+targetEntityType: node
+bundle: event
+mode: full
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    region: middle
+  field_end_date:
+    type: datetime_default
+    weight: 1
+    region: left
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: simple_date_with_day
+    third_party_settings: {  }
+  field_event_time:
+    type: time_range_formatter
+    weight: 2
+    region: left
+    label: hidden
+    settings:
+      timerange_format: 'start - end'
+      time_format: 'h:i a'
+    third_party_settings: {  }
+  field_location:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: left
+  field_main_header_image:
+    type: entity_reference_entity_view
+    weight: 6
+    region: middle
+    label: hidden
+    settings:
+      view_mode: basic_page_header
+      link: false
+    third_party_settings: {  }
+  field_registration_link:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: left
+  field_sidebar:
+    type: viewsreference_formatter
+    weight: 8
+    region: right
+    label: hidden
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+  field_start_date:
+    type: datetime_default
+    weight: 0
+    region: left
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: simple_date_with_day
+    third_party_settings: {  }
+  links:
+    weight: 5
+    region: middle
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_event_type: true

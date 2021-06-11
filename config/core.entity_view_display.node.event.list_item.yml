@@ -1,0 +1,38 @@
+uuid: f9fe228a-aae3-4d74-906a-cf7d6077ebe7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.list_item
+    - field.field.node.event.body
+    - field.field.node.event.field_end_date
+    - field.field.node.event.field_event_time
+    - field.field.node.event.field_event_type
+    - field.field.node.event.field_location
+    - field.field.node.event.field_main_header_image
+    - field.field.node.event.field_registration_link
+    - field.field.node.event.field_sidebar
+    - field.field.node.event.field_start_date
+    - node.type.event
+  module:
+    - user
+id: node.event.list_item
+targetEntityType: node
+bundle: event
+mode: list_item
+content:
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_end_date: true
+  field_event_time: true
+  field_event_type: true
+  field_location: true
+  field_main_header_image: true
+  field_registration_link: true
+  field_sidebar: true
+  field_start_date: true

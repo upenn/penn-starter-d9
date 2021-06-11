@@ -1,0 +1,25 @@
+uuid: a4c3ae5f-e91f-4086-8489-03793d0e0a9c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:213ccaff-e37d-440c-b990-14835d19f980'
+  module:
+    - block_content
+  theme:
+    - penn_starter
+id: copyrightandprivacypolicy
+theme: penn_starter
+region: footer_bottom
+weight: 0
+provider: null
+plugin: 'block_content:213ccaff-e37d-440c-b990-14835d19f980'
+settings:
+  id: 'block_content:213ccaff-e37d-440c-b990-14835d19f980'
+  label: 'Copyright and Privacy Policy'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,25 @@
+uuid: 422eff59-2d09-4f1d-8ef2-68deda30a03b
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.secondary-menu
+  module:
+    - system
+  theme:
+    - penn_starter
+id: secondarymenu
+theme: penn_starter
+region: navbar_branding
+weight: -6
+provider: null
+plugin: 'system_menu_block:secondary-menu'
+settings:
+  id: 'system_menu_block:secondary-menu'
+  label: 'Secondary Menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

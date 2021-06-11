@@ -1,0 +1,8 @@
+uuid: 472877f1-ac07-4c36-bffe-f24845494599
+langcode: en
+status: true
+dependencies: {  }
+id: full_day_date_and_time
+label: 'Full day, date, and time'
+locked: false
+pattern: 'l, M d Y g:iA'

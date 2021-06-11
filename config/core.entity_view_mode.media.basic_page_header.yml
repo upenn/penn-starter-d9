@@ -1,0 +1,10 @@
+uuid: dbdf27cf-a6b3-485e-987b-0440ff9faa45
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.basic_page_header
+label: 'Basic Page Header'
+targetEntityType: media
+cache: true
