@@ -14,9 +14,8 @@
         }
     ],
     "require": {
-        "drupal/addtocal": "^2.0@beta",
-        "drupal/ds": "^3.12",
-        "pantheon-upstreams/upstream-configuration": "*"
+        "pantheon-upstreams/upstream-configuration": "*",
+        "drush/drush": "^10"
     },
     "conflict": {
             "drupal/drupal": "*"
@@ -52,7 +51,6 @@
         }
     },
     "config": {
-        "optimize-autoloader": true,
         "preferred-install": "dist",
         "sort-packages": true,
         "platform": {
