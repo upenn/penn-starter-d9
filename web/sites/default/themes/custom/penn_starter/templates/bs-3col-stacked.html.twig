@@ -1,0 +1,75 @@
+{#
+/**
+ * @file
+ * Bootstrap Layouts: "3 Columns (stacked)" template.
+ *
+ * Available layout variables:
+ * - wrapper: Wrapper element for the layout container.
+ * - attributes: Wrapper attributes for the layout container.
+ *
+ * Available region variables:
+ * - top
+ * - left
+ * - middle
+ * - right
+ * - bottom
+ *
+ * Each region variable contains the following properties:
+ * - wrapper: The HTML element to use to wrap this region.
+ * - attributes: The HTML attributes to use on the wrapper for this region.
+ * - content: The content to go inside the wrapper for this region.
+ */
+#}
+<{{ wrapper }}{{ attributes }}>
+  {{ title_suffix.contextual_links }}
+
+  {% if top.content %}
+  <{{ top.wrapper }}{{ top.attributes }}>
+    {{ top.content }}
+  </{{ top.wrapper }}>
+  {% endif %}
+{{ page.admin }}
+{{ page.left }}
+  <{{ left.wrapper }}{{ left.attributes }}>
+  {% if node.getType == 'page' %}
+    <div class="sidebar-left-wrapper">
+      {{ drupal_region('left') }}
+    </div>
+  {% endif %}
+  {% if left.content %}
+    <div class="sidebar-left-wrapper">
+        <div class="sidebar-heading-wrapper">
+        {% if node.getType == 'person' %}
+          <h2 class="sidebar-heading">{{ node.field_first_name.value }} {{ node.field_middle_name.value }} {{ node.field_last_name.value }}</h2>
+        {% endif %}
+        {% if node.getType == 'event' %}
+          <h2 class="sidebar-heading">Details</h2>
+        {% endif %}
+        {% if node.getType == 'article' %}
+          <h2 class="sidebar-heading">About this article</h2>
+        {% endif %}
+        {{ left.content }}
+        </div>
+    </div>
+  {% endif %}
+  </{{ left.wrapper }}>
+
+  {% if middle.content %}
+  <{{ middle.wrapper }}{{ middle.attributes }}>
+    {{ middle.content }}
+  </{{ middle.wrapper }}>
+  {% endif %}
+
+  {% if right.content %}
+  <{{ right.wrapper }}{{ right.attributes }}>
+    {{ right.content }}
+  </{{ right.wrapper }}>
+  {% endif %}
+
+  {% if bottom.content %}
+  <{{ bottom.wrapper }}{{ bottom.attributes }}>
+    {{ bottom.content }}
+  </{{ bottom.wrapper }}>
+  {% endif %}
+
+</{{ wrapper }}>

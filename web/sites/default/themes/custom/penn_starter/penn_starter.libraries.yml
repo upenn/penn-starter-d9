@@ -1,0 +1,11 @@
+style:
+  version: 1
+  css:
+    theme:
+      assets/css/penn_starter.style.css: {}
+  js:
+    assets/js/penn_starter.script.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/jquery.once

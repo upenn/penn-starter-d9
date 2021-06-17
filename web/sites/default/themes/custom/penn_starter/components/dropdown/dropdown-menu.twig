@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * Template for a Dropdown menu component.
+ */
+#}
+<div class="dropdown-menu" tabindex="-1">
+<div class="container">
+<div class="row">
+<div class="col-lg-8 offset-lg-2 dropdown-menu--link-container">
+<ul>
+  {% for item in items %}
+  
+    {% set nav_link_classes = [
+      'dropdown-item',
+      item.in_active_trail ? 'active'
+    ] %}
+    {% if item.url.options.attributes.class is iterable %}
+      {% set nav_link_classes = nav_link_classes|merge(item.url.options.attributes.class) %}
+    {% elseif item.url.options.attributes.class %}
+      {% set nav_link_classes = nav_link_classes|merge([item.url.options.attributes.class]) %}
+    {% endif %}
+    <li>{{ link(item.title, item.url, { 'class': nav_link_classes }) }}</li>
+    
+  {% endfor %}
+  </ul>
+  </div>
+  </div>
+  </div>
+</div>

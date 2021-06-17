@@ -1,0 +1,39 @@
+// Page
+// -----------------------------------------------------------------------------
+.page_basic {
+    .page__header-text-container {
+        .page__header-label {
+            @extend .badge;
+            @extend .badge-secondary;
+        }
+        .page__header-title {
+            padding-bottom: 1.5rem;
+        }
+        &:after {
+            content: '';
+            display: block;
+            position: relative;
+            //bottom: -11px;
+            background: $gray-300;
+            width: 100%;
+            height: 3px;
+        }
+    }
+    .header-img_container {
+        @extend .mb-5;
+    }
+    .bs-region--left, .bs-region--middle, .bs-region--right {
+        @extend .mb-5;
+    }
+}
+
+.node--view-mode-teaser {
+    .bs-region--left, .bs-region--middle, .bs-region--right {
+        margin-bottom: 0!important;
+        .header-img_container {
+            @extend .mb-4;
+        }
+    }
+    
+    padding: 1.5rem 0;
+}

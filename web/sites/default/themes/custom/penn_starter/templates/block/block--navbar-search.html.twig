@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * Template for a block.
+ */
+#}
+
+<div class="searchContainer">
+<button id="searchToggle" aria-expanded="false" aria-controls="searchBar"><span class="searchOpen" aria-hidden="true"></span><span class="searchClose" aria-hidden="true"></span><span class="sr-only">Search</span></button>
+
+<div id="searchBar" aria-hidden="true">
+{% include '@radix/block/block.twig' with {
+  html_tag: 'div',
+} %}
+
+
+{% block content %}
+{% endblock %}
+</div>
+</div>

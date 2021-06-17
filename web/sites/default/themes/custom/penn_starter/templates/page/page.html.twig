@@ -1,0 +1,79 @@
+{#
+/**
+ * @file
+ * Template for the main page.
+ */
+#}
+<div class="page page_basic">
+  {% embed '@penn_starter/navbar/navbar.twig' with {
+    placement: 'sticky-top',
+    container: 'fixed',
+    color: 'light',
+    utility_classes: ['bg-light'],
+  } %}
+
+
+    {% block branding %}
+      {% if page.navbar_branding %}
+        {{ page.navbar_branding }}
+      {% endif %}
+    {% endblock %}
+
+    {% block left %}
+      {% if page.navbar_left %}
+        <div class="mr-auto">
+          {{ page.navbar_left }}
+        </div>
+      {% endif %}
+    {% endblock %}
+
+    {% block right %}
+      {% if page.navbar_right %}
+        {{ page.navbar_right }}
+      {% endif %}
+    {% endblock %}
+  {% endembed %}
+
+  <header class="page__header mb-3 mt-5 bg-container">
+        <div class="container">
+            <div class="page__header-text-container">
+                {% if node.field_event_type is not empty %}
+                        <p class="page__header-label">{{ node.field_event_type.entity.name.value }}</p>
+                {% endif %}
+                <h1 class="page__header-title display-4">{{ node.label }}</h1>
+            </div>
+        </div>
+    </header>
+  
+  <main id="main-content" class="pt-5 pb-5">
+    <div class="container"><div class="row"><div class="col-12">{{ page.admin }}</div></div></div>
+    {% if page.content %}
+      <div class="page__content">
+        <div class="container">
+          {{ page.content }}
+        </div>
+      </div>
+    {% endif %}
+  </main>
+
+
+    <footer class="page__footer">
+      <div class="container">
+        <div class="row">
+          <div class="footer-left">
+            {{ page.footer_left }}
+          </div>
+          <div class="footer-right">
+            {{ page.footer_right }}
+          </div>
+          </div>
+          <div class="row">
+          <div class="footer-bottom">
+            {{ page.footer_bottom }}
+          </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+</div>

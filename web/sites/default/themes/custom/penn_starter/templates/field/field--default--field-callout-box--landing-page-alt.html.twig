@@ -1,0 +1,50 @@
+{#
+/**
+ * @file
+ * Default template for a field.
+ */
+#}
+{%
+  set classes = [
+  bundle|clean_class ~ '__' ~ field_name_clean|clean_class,
+  label_display == 'inline' ? 'd-flex',
+]
+%}
+{%
+  set title_classes = [
+  'field__label',
+  'font-weight-bold',
+  label_display == 'visually_hidden' ? 'visually-hidden',
+]
+%}
+
+{% if label_hidden %}
+  {% if multiple %}
+    <div{{ attributes.addClass(classes) }}>
+    <div class="callout-box-wrapper">
+      {% for item in items %}
+        <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+      {% endfor %}
+      </div>
+    </div>
+  {% else %}
+    {% for item in items %}
+    
+      <div{{ attributes.addClass(classes) }}><div class="callout-box-wrapper">{{ item.content }}</div>
+      </div>
+    {% endfor %}
+  {% endif %}
+{% else %}
+  <div{{ attributes.addClass(classes) }}>
+  <div class="callout-box-wrapper">
+    {% if multiple %}
+    <div class="field__items">
+      {% endif %}
+      {% for item in items %}
+        <div{{ item.attributes.addClass('field__item') }}>{{ item.content }}</div>
+      {% endfor %}
+      {% if multiple %}
+    </div>
+    {% endif %}
+  </div></div>
+{% endif %}
