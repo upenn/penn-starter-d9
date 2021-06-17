@@ -35,10 +35,9 @@
         "drupal/components": "^2.2",
         "drupal/console": "^1.9",
         "drush/drush": "^10.4",
-        "drupal/structure_sync": "^2.0",
-        "drupal/addtocal": "^2.0@beta"
+        "drupal/structure_sync": "^2.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "version": "1.0.6"
+    "version": "1.0.7"
 }
