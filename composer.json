@@ -25,6 +25,9 @@
     "scripts": {
         "post-install-cmd": [
             "rm -rf vendor/simplesamlphp/simplesamlphp/config && ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config"
+        ],
+        "post-update-cmd": [
+            "rm -rf vendor/simplesamlphp/simplesamlphp/config && ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config"
         ]
     },
     "extra": {
