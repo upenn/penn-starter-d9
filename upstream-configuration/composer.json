@@ -41,7 +41,8 @@
         "drupal/editoria11y": "^1.0",
         "drupal/social_media_links": "^2.8",
         "drupal/time_field": "^2.0",
-        "drupal/ds": "^3.13"
+        "drupal/ds": "^3.13",
+        "drupal/default_content": "^2.0@alpha"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
