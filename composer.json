@@ -27,13 +27,13 @@
             "rm -rf vendor/simplesamlphp/simplesamlphp/config && ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config",
             "rm -rf vendor/simplesamlphp/simplesamlphp/metadata && ln -sf ../../../private/simplesamlphp/metadata vendor/simplesamlphp/simplesamlphp/metadata",
             "rm -rf vendor/simplesamlphp/simplesamlphp/cert && ln -sf ../../../private/simplesamlphp/metadata vendor/simplesamlphp/simplesamlphp/cert",
-            "rm -rf web/simplesaml && ln -sf ../vendorsimplesamlphp/simplesamlphp/www web/simplesaml"
+            "rm -rf web/simplesaml && ln -sf ../vendor/simplesamlphp/simplesamlphp/www web/simplesaml"
         ],
         "post-update-cmd": [
             "rm -rf vendor/simplesamlphp/simplesamlphp/config && ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config",
             "rm -rf vendor/simplesamlphp/simplesamlphp/metadata && ln -sf ../../../private/simplesamlphp/metadata vendor/simplesamlphp/simplesamlphp/metadata",
             "rm -rf vendor/simplesamlphp/simplesamlphp/cert && ln -sf ../../../private/simplesamlphp/metadata vendor/simplesamlphp/simplesamlphp/cert",
-            "rm -rf web/simplesaml && ln -sf ../vendorsimplesamlphp/simplesamlphp/www web/simplesaml"
+            "rm -rf web/simplesaml && ln -sf ../vendor/simplesamlphp/simplesamlphp/www web/simplesaml"
         ]
     },
     "extra": {
