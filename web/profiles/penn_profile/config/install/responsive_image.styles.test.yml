@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.large
+    - image.style.max_1300x1300
+id: test
+label: Test
+image_style_mappings:
+  -
+    breakpoint_id: responsive_image.viewport_sizing
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: max_1300x1300
+breakpoint_group: responsive_image
+fallback_image_style: large

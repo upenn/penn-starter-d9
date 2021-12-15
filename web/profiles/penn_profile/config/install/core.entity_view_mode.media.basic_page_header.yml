@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.basic_page_header
+label: 'Basic Page Header'
+targetEntityType: media
+cache: true

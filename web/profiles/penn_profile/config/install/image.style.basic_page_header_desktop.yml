@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+name: basic_page_header_desktop
+label: 'Basic Page Header-Desktop'
+effects:
+  5d0bb1cd-0686-4874-97a1-4cdb8426a634:
+    uuid: 5d0bb1cd-0686-4874-97a1-4cdb8426a634
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1280
+      height: 720
+      anchor: center-center

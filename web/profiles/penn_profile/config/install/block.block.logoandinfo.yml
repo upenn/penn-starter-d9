@@ -1,0 +1,24 @@
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:747aeb2b-4af5-43cb-9fb7-40b6cc7f2d77'
+  module:
+    - block_content
+  theme:
+    - penn_starter
+id: logoandinfo
+theme: penn_starter
+region: footer_left
+weight: 0
+provider: null
+plugin: 'block_content:747aeb2b-4af5-43cb-9fb7-40b6cc7f2d77'
+settings:
+  id: 'block_content:747aeb2b-4af5-43cb-9fb7-40b6cc7f2d77'
+  label: 'Logo and Info'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

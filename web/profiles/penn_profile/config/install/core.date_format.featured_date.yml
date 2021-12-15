@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: featured_date
+label: 'Featured Date'
+locked: false
+pattern: 'j M Y'

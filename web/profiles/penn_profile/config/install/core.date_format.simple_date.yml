@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: simple_date
+label: 'Simple Date'
+locked: false
+pattern: 'F d, Y'

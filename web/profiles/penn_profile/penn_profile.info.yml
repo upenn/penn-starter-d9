@@ -20,38 +20,15 @@ distribution:
   #
   # To set your theme as the theme for the distribution installation uncomment the following:
   #
-  # install:
-  #   theme: my_theme
+  install:
+    theme: penn_starter
   #   # To redirect to specific URL after profile installation set your finish_url: 
   #   finish_url: ?welcome=1
-  langcode: de
+  langcode: en
 
 # Modules to install to support the profile.
 install:
-  - history
-  - block_content
-  - breakpoint
-  - color
-  - config
-  - comment
-  - contextual
-  - contact
-  - quickedit
-  - help
-  - image
-  - options
-  - path
-  - taxonomy
-  - dblog
-  - search
-  - shortcut
-  - toolbar
-  - field_ui
-  - file
-  - rdf
-  - views
-  - views_ui
-  - editor
+  - simplesamlphp_auth
   - ckeditor
 
 # Required modules
@@ -66,4 +43,5 @@ dependencies:
 themes:
   - bartik
   - seven
-
+  - radix
+  - penn_starter

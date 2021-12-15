@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.listing_page.field_attach_a_listing_view
+    - field.field.node.listing_page.field_featured_content
+    - node.type.listing_page
+  module:
+    - user
+id: node.listing_page.teaser
+targetEntityType: node
+bundle: listing_page
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_attach_a_listing_view: true
+  field_featured_content: true

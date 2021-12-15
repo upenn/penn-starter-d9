@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.headshot
+    - field.field.media.image.field_media_image
+    - image.style.headshot
+    - media.type.image
+  module:
+    - image
+id: media.image.headshot
+targetEntityType: media
+bundle: image
+mode: headshot
+content:
+  field_media_image:
+    label: hidden
+    settings:
+      image_style: headshot
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    weight: 1
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

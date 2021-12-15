@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: simple_date_with_day
+label: 'Simple Date with Day'
+locked: false
+pattern: 'l, F d Y'

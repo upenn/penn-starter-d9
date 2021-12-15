@@ -1,0 +1,77 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.listing_page.field_attach_a_listing_view
+    - field.field.node.listing_page.field_featured_content
+    - node.type.listing_page
+  module:
+    - ds
+    - user
+    - viewsreference
+third_party_settings:
+  ds:
+    layout:
+      id: bs_1col_stacked
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        layout:
+          wrapper: div
+          classes:
+            row: row
+          add_layout_class: 1
+          attributes: ''
+        regions:
+          top:
+            wrapper: div
+            classes: {  }
+            add_region_classes: 1
+            attributes: ''
+          main:
+            wrapper: div
+            classes: {  }
+            add_region_classes: 1
+            attributes: ''
+          bottom:
+            wrapper: div
+            classes: {  }
+            add_region_classes: 1
+            attributes: ''
+    regions:
+      top:
+        - links
+        - field_featured_content
+      main:
+        - field_attach_a_listing_view
+id: node.listing_page.default
+targetEntityType: node
+bundle: listing_page
+mode: default
+content:
+  field_attach_a_listing_view:
+    weight: 2
+    label: hidden
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    type: viewsreference_formatter
+    region: main
+  field_featured_content:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: featured
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: top
+  links:
+    weight: 0
+    region: top
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }
