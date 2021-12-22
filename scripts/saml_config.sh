@@ -26,10 +26,3 @@ if [ ! -L "vendor/simplesamlphp/simplesamlphp/metadata" ]; then
   echo "Re-linking simplesaml metadata directory"
   ln -s ../../../private/simplesamlphp/metadata vendor/simplesamlphp/simplesamlphp/metadata
 fi
-
-if [ ! -L "web/simplesaml" ]; then
- if [ -d "vendor/simplesamlphp/simplesamlphp/www" ]; then
-  echo "Linking simplesaml www directory"
-  ln -s ../vendor/simplesamlphp/simplesamlphp/www web/simplesaml
-  fi
-fi
