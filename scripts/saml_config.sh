@@ -6,7 +6,7 @@ if [ ! -L "vendor/simplesamlphp/simplesamlphp/config" ]; then
     rm -rf vendor/simplesamlphp/simplesamlphp/config
   fi
   echo "Re-linking simplesaml config directory"
-  ln -sf ../../../private/simplesamlphp/config.php vendor/simplesamlphp/simplesamlphp/config
+  ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config
 fi
 
 if [ ! -L "vendor/simplesamlphp/simplesamlphp/cert" ]; then
