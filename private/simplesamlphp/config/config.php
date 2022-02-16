@@ -118,8 +118,8 @@ $config = array(
      * The email address will be used as the recipient address for error reports, and
      * also as the technical contact in generated metadata.
      */
-    'technicalcontact_name' => 'Rick Ward',
-    'technicalcontact_email' => 'rickward@upenn.edu',
+    'technicalcontact_name' => 'Web Hosting Service',
+    'technicalcontact_email' => 'web-platform-service@lists.upenn.edu',
 
     /*
      * The timezone of the server. This option should be set to the timezone you want
