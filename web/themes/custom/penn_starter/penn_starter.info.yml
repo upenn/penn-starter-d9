@@ -14,7 +14,7 @@ regions:
   header: Header
   admin: Admin
   left: Left
-  middle: Middle
+  content: Middle
   right: Right
   page_bottom: Page bottom
   footer_left: Footer left
@@ -31,10 +31,9 @@ libraries-override:
 ckeditor_stylesheets:
   - assets/css/penn_starter.style.css
 
-component-libraries:
-  penn_starter:
-    paths:
-      - ./components
+components:
+  namespaces:
+    penn_starter: components
 
 # Information added by Drupal.org packaging script on 2020-09-30
 version: '8.x-4.10'
