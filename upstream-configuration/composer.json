@@ -50,6 +50,14 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
+    "scripts": {
+        "post-install-cmd": [
+            "/bin/bash ../scripts/saml_config.sh"
+        ],
+        "post-update-cmd": [
+            "/bin/bash ../scripts/saml_config.sh"
+        ]
+    },
     "version": "1.0.15",
     "extra": {
         "enable-patching": true,

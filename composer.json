@@ -24,14 +24,6 @@
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "scripts": {
-        "post-install-cmd": [
-            "/bin/bash scripts/saml_config.sh"
-        ],
-        "post-update-cmd": [
-            "/bin/bash scripts/saml_config.sh"
-        ]
-    },
     "extra": {
         "installer-paths": {
             "web/core": ["type:drupal-core"],
