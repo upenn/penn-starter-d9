@@ -40,7 +40,7 @@ if [ ! -L "vendor/simplesamlphp/simplesamlphp/metadata" ]; then
   if [ -d "vendor/simplesamlphp/simplesamlphp/metadata" ]; then
     echo "Removing default simplesaml metadata directory"
     rm -rf vendor/simplesamlphp/simplesamlphp/metadata
-    echo "Linking simplesaml metadata directory"
-    ln -s ../../../private/simplesamlphp/metadata vendor/simplesamlphp/simplesamlphp/metadata
   fi
+  echo "Linking simplesaml metadata directory"
+  ln -s ../../../private/simplesamlphp/metadata vendor/simplesamlphp/simplesamlphp/metadata
 fi

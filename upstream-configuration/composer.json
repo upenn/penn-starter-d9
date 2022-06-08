@@ -10,11 +10,6 @@
     
     "require": {
         "php": ">=7.3",
-        "composer/installers": "^1.8",
-        "drupal/core-composer-scaffold": "^9",
-        "drupal/core-recommended": "^8.8 || ^9",
-        "pantheon-systems/drupal-integrations": "^8 || ^9",
-        "cweagans/composer-patches": "^1.0",
         "zaporylie/composer-drupal-optimizations": "^1.2",
         "drupal/radix": "^4.11",
         "drupal/responsive_background_image": "^1.0@alpha",
@@ -35,7 +30,6 @@
         "drupal/ckeditor_bootstrap_buttons": "^2.0",
         "drupal/components": "^3.0@beta",
         "drupal/console": "^1.9",
-        "drush/drush": "^10.4",
         "drupal/structure_sync": "^2.0",
         "drupal/menu_block": "^1.7",
         "drupal/addtocal": "^2.0@beta",
@@ -66,15 +60,5 @@
                 "Fail gracefully if CKEditor plugins fail to provide file URI": "https://www.drupal.org/files/issues/2022-02-22/3264236-10.patch"
             }
          }
-    },
-    "config": {
-        "allow-plugins": {
-            "cweagans/composer-patches": true,
-            "composer/installers": true,
-            "drupal/core-composer-scaffold": true,
-            "zaporylie/composer-drupal-optimizations": true,
-            "drupal/console-extend-plugin": true,
-            "simplesamlphp/composer-module-installer": true
-        }
     }
 }
