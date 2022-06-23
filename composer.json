@@ -60,7 +60,13 @@
         "composer-exit-on-patch-failure": true,
         "patchLevel": {
             "drupal/core": "-p2"
-        }
+        },
+        "enable-patching": true,
+        "patches": {
+            "drupal/core": {
+                "Fail gracefully if CKEditor plugins fail to provide file URI": "https://www.drupal.org/files/issues/2022-02-22/3264236-10.patch"
+            }
+         }
     },
     "autoload": {
         "classmap": [
@@ -73,6 +79,12 @@
         ],
         "upstream-require": [
             "DrupalComposerManaged\\ComposerScripts::upstreamRequire"
+        ],
+        "post-install-cmd": [
+            "/bin/bash scripts/saml_config.sh"
+        ],
+        "post-update-cmd": [
+            "/bin/bash scripts/saml_config.sh"
         ]
     },
     "scripts-descriptions": {
