@@ -33,7 +33,7 @@ ckeditor_stylesheets:
 
 components:
   namespaces:
-    penn_starter: components
+    penn_starter: src/components
 
 # Information added by Drupal.org packaging script on 2020-09-30
 version: '8.x-4.10'
