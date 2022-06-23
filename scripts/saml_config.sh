@@ -10,9 +10,9 @@ if [ ! -L "vendor/simplesamlphp/simplesamlphp/config" ]; then
   if [ -d "vendor/simplesamlphp/simplesamlphp/config" ]; then
     echo "Removing default simplesaml config directory"
     rm -rf vendor/simplesamlphp/simplesamlphp/config
-    echo "Linking simplesaml config directory"
-    ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config
   fi
+  echo "Linking simplesaml config directory"
+  ln -sf ../../../private/simplesamlphp/config vendor/simplesamlphp/simplesamlphp/config
 fi
 
 if [ -L "vendor/simplesamlphp/simplesamlphp/cert" ]; then

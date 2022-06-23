@@ -1,6 +1,6 @@
 <?php
-
-// set entityID to primary live domain
+// rename to authsources.php
+// set $primary_domain to primary live domain
 $primary_domain = 'global.upenn.edu';
 $entity_id = 'https://' . $primary_domain . '/simplesaml/module.php/saml/sp/metadata.php/default-sp';
 $sp_name = 'default-sp';
