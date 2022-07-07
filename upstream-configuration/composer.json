@@ -31,7 +31,7 @@
         "drupal/components": "^2.4",
         "drupal/console": "^1.9",
         "drupal/structure_sync": "^2.0",
-        "drupal/menu_block": "^1.7",
+        "drupal/menu_block": "^1.8",
         "drupal/addtocal": "^2.0@beta",
         "drupal/editoria11y": "^1.0",
         "drupal/social_media_links": "^2.8",
@@ -48,5 +48,13 @@
     "scripts": {
     },
     "extra": {
+    },
+    "config": {
+        "allow-plugins": {
+            "composer/installers": true,
+            "zaporylie/composer-drupal-optimizations": true,
+            "drupal/console-extend-plugin": true,
+            "simplesamlphp/composer-module-installer": true
+        }
     }
 }

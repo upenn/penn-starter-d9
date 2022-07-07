@@ -27,6 +27,12 @@ libraries:
 
 libraries-override:
   radix/bootstrap: false
+  ckeditor_accordion/accordion_style:
+    js:
+      js/ckeditor-accordion.js: assets/js/ckeditor-accordion.js
+    css:
+      theme:
+        css/ckeditor-accordion.css: assets/css/penn_starter.style.css
 
 ckeditor_stylesheets:
   - assets/css/penn_starter.style.css

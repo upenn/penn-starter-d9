@@ -31,10 +31,10 @@
 {{ page.admin }}
 {{ page.left }}
   <{{ left.wrapper }}{{ left.attributes }}>
-  {% if node.getType == 'page' %}
+{% if node.getType == 'page' %}
     <div class="sidebar-left-wrapper">
       {{ drupal_region('left') }}
-    </div>
+</div>
   {% endif %}
   {% if left.content %}
     <div class="sidebar-left-wrapper">

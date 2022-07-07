@@ -1,97 +1,238 @@
-/******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
-/******/
-/******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
-/******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
-/******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
-/******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
-/******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
-/******/ 	};
-/******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
-/******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
-/******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/";
-/******/
-/******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
-/******/ })
-/************************************************************************/
-/******/ ({
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/js/penn_starter.script.js":
+/*!***************************************!*\
+  !*** ./src/js/penn_starter.script.js ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.js");
+/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(bootstrap__WEBPACK_IMPORTED_MODULE_0__);
+
+
+/*
+(function ($) {
+  'use strict';
+
+
+  var searchToggle = $('#searchToggle');
+  var searchBar = $('#searchBar');
+  $(searchToggle).click(function () {
+    $(this).attr('aria-expanded', $(this).attr('aria-expanded') === 'false' ? 'true' : 'false');
+    $(searchBar).attr('aria-hidden', $(searchBar).attr('aria-hidden') === 'true' ? 'false' : 'true').toggleClass('opened');
+
+  });
+
+  // recaptcha a11y fix
+  var intervalID = window.setInterval(myCallback, 50);
+
+  function myCallback() {
+    var textAreaCheck = document.getElementsByClassName('g-recaptcha-response');
+    if (textAreaCheck.length > 0) {
+      $(textAreaCheck).attr('aria-labelledby', 'g-recaptcha-response');
+      console.log($(textAreaCheck));
+      clearInterval(intervalID);
+    }
+  }
+
+  // apply has-bg class to body when a landing page has a background image
+  if ($(".landing-page__field-background-image")[0]) {
+    $('body').addClass('has-bg');
+  }
+
+  // apply has-alert class to body when an alert is present
+  if ($(".bs-site-alert")[0]) {
+    $('body').addClass('has-alert');
+  }
+
+  // apply has-featured class to body when a featured view mode is present
+  if ($(".node--type-listing-page .listing-page__field-featured-content")[0]) {
+    $('body').addClass('has-featured');
+  }
+
+  var featuredDate = $(".featured-date-wrap").text().split(" ");
+  $(".featured-date-wrap").empty();
+  $.each(featuredDate, function (i, v) {
+    $(".featured-date-wrap").append($("<span>").text(v));
+  });
+  var featuredFlag = $("<span class='featured-flag'>Featured</span>");
+  if ($(".node--type-listing-page .listing-page__field-featured-content")[0]) {
+    $('.node--view-mode-featured > .bs-region--right').prepend(featuredFlag);
+  }
+
+  // apply external class to all external links
+  $('a').filter(function() {
+    return this.hostname && this.hostname !== location.hostname;
+ }).append("<span class='external'><span class='sr-only'>(link is external)</span></span>");
+
+
+  $('.nav-item.dropdown')
+    .mouseover(function () {
+      clearTimeout(this.timer)
+      $(this).addClass('show');
+    })
+    .mouseleave(function () {
+      this.timer = setTimeout(function () {
+        $(this).removeClass('show');
+      }.bind(this), 500);
+    });
+
+  if ($(".dropdown").hasClass('show')) {
+    $('body').addClass('has-alert');
+  }
+
+  if ($(".nav-item.dropdown").hasClass('show')) (function () {
+
+    $(this).children('.dropdown-menu').removeAttr('tab-index');
+    console.log('hey');
+
+
+  });
+
+
+/*
+  Drupal.behaviors.mobileNav = {
+    attach: function (context, settings) {
+      $('body').once('event-bindings').each(function () {
+
+        function breakPointMods(x) {
+          if (breakpoint_mobile.matches) { // If media query matches
+            // Close menu on ESC
+            $(document).keyup(function (e) {
+              if (e.keyCode == 27) { // escape key maps to keycode `27`
+                $('.navbar-collapse').removeClass('show');
+                $('button.navbar-toggler').attr('aria-expanded', 'false');
+              }
+            });
+            // Close all navs when focus has left the menu
+            $('.navbar-collapse').focusout(function (e) {
+              $(this).removeClass('show');
+            });
+
+
+
+            var breakpoint_mobile = window.matchMedia("(max-width: 991px)")
+            breakPointMods(breakpoint_mobile) // Call listener function at run time
+            breakpoint_mobile.addListener(breakPointMods) // Attach listener function on state changes
+          }
+          
+        }
+
+        
+
+      });
+
+
+    }
+  };*/
+
+/*
+
+})(jQuery, Drupal);
+*/
+
+(function ($, Drupal, drupalSettings) {
+  Drupal.behaviors.mobileNavs = {
+    attach: function attach(context, settings) {
+      $('body').once('event-bindings').each(function () {
+        // Add mobileBreakpoint class to body so contained keyboard focus on menu only triggers when mobile menu is present
+        var handleMatchMedia = function handleMatchMedia(mediaQuery) {
+          if (mediaQuery.matches) {
+            $("body").addClass("mobileBreakpoint");
+          } else {
+            $("body").removeClass("mobileBreakpoint");
+          }
+        },
+            mql = window.matchMedia('all and (max-width: 991px)');
+
+        handleMatchMedia(mql);
+        mql.addListener(handleMatchMedia);
+        var searchToggle = $('#searchToggle');
+        var searchBar = $('#searchBar');
+        $(searchToggle).click(function () {
+          $(this).attr('aria-expanded', $(this).attr('aria-expanded') === 'false' ? 'true' : 'false');
+          $(searchBar).attr('aria-hidden', $(searchBar).attr('aria-hidden') === 'true' ? 'false' : 'true').toggleClass('opened'); // Close all navs when focus has left the menu
+        });
+      });
+    }
+  };
+  $('body').on('keydown', function (e) {
+    if (e.keyCode == 27) {
+      // escape key maps to keycode `27`
+      $('.mobileBreakpoint .navbar .navbar-collapse').removeClass('show');
+      $('.mobileBreakpoint .navbar-toggler').attr('aria-expanded', 'false');
+      $(searchToggle).attr('aria-expanded', 'false');
+      $(searchBar).attr('aria-hidden', 'true').removeClass('opened');
+    }
+  });
+  Drupal.behaviors.pageMods = {
+    attach: function attach(context, settings) {
+      $('body').once('page-load').each(function () {
+        // recaptcha a11y fix
+        var intervalID = window.setInterval(myCallback, 50);
+
+        function myCallback() {
+          var textAreaCheck = document.getElementsByClassName('g-recaptcha-response');
+
+          if (textAreaCheck.length > 0) {
+            $(textAreaCheck).attr('aria-labelledby', 'g-recaptcha-response');
+            console.log($(textAreaCheck));
+            clearInterval(intervalID);
+          }
+        } // apply has-bg class to body when a landing page has a background image
+
+
+        if ($(".landing-page__field-background-image")[0]) {
+          $('body').addClass('has-bg');
+        } // apply has-alert class to body when an alert is present
+
+
+        if ($(".bs-site-alert")[0]) {
+          $('body').addClass('has-alert');
+        } // apply has-featured class to body when a featured view mode is present
+
+
+        if ($(".node--type-listing-page .listing-page__field-featured-content")[0]) {
+          $('body').addClass('has-featured');
+        } // featured date
+
+
+        var featuredDate = $(".featured-date-wrap").text().split(" ");
+        $(".featured-date-wrap").empty();
+        $.each(featuredDate, function (i, v) {
+          $(".featured-date-wrap").append($("<span>").text(v));
+        });
+        var featuredFlag = $("<span class='featured-flag'>Featured</span>");
+
+        if ($(".node--type-listing-page .listing-page__field-featured-content")[0]) {
+          $('.node--view-mode-featured > .bs-region--right').prepend(featuredFlag);
+        } // apply external class to all external links
+
+
+        $('a').filter(function () {
+          return this.hostname && this.hostname !== location.hostname;
+        }).append("<span class='external'><span class='sr-only'>(link is external)</span></span>"); // apply labels on search page
+
+        if (window.location.href.indexOf("/search") > -1) {
+          $('#search-block-form > .form-item').prepend("<label class='sr-only' for='edit-keys--2'>Search the site:</label>");
+        } else {
+          $('#search-block-form > .form-item').prepend("<label class='sr-only' for='edit-keys'>Search the site:</label>");
+        }
+      });
+    }
+  };
+})(jQuery, Drupal, drupalSettings);
+
+/***/ }),
 
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.js":
 /*!*****************************************************!*\
   !*** ./node_modules/bootstrap/dist/js/bootstrap.js ***!
   \*****************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
 
 /*!
   * Bootstrap v4.3.1 (https://getbootstrap.com/)
@@ -100,7 +241,7 @@
   */
 (function (global, factory) {
    true ? factory(exports, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"), __webpack_require__(/*! popper.js */ "./node_modules/popper.js/dist/esm/popper.js")) :
-  undefined;
+  0;
 }(this, function (exports, $, Popper) { 'use strict';
 
   $ = $ && $.hasOwnProperty('default') ? $['default'] : $;
@@ -4535,8 +4676,7 @@
 /*!********************************************!*\
   !*** ./node_modules/jquery/dist/jquery.js ***!
   \********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
 var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
  * jQuery JavaScript Library v3.5.1
@@ -15373,7 +15513,7 @@ if ( true ) {
 	!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = (function() {
 		return jQuery;
 	}).apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+		__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
 }
 
 
@@ -15415,16 +15555,31 @@ return jQuery;
 
 /***/ }),
 
+/***/ "./src/sass/penn_starter.style.scss":
+/*!******************************************!*\
+  !*** ./src/sass/penn_starter.style.scss ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./node_modules/popper.js/dist/esm/popper.js":
 /*!***************************************************!*\
   !*** ./node_modules/popper.js/dist/esm/popper.js ***!
   \***************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(global) {/**!
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/**!
  * @fileOverview Kickass library to create and place poppers near their reference elements.
  * @version 1.16.1
  * @license
@@ -18034,299 +18189,192 @@ var Popper = function () {
  */
 
 
-Popper.Utils = (typeof window !== 'undefined' ? window : global).PopperUtils;
+Popper.Utils = (typeof window !== 'undefined' ? window : __webpack_require__.g).PopperUtils;
 Popper.placements = placements;
 Popper.Defaults = Defaults;
 
-/* harmony default export */ __webpack_exports__["default"] = (Popper);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Popper);
 //# sourceMappingURL=popper.js.map
-
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
-
-/***/ }),
-
-/***/ "./node_modules/webpack/buildin/global.js":
-/*!***********************************!*\
-  !*** (webpack)/buildin/global.js ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-var g;
-
-// This works in non-strict mode
-g = (function() {
-	return this;
-})();
-
-try {
-	// This works if eval is allowed (see CSP)
-	g = g || new Function("return this")();
-} catch (e) {
-	// This works if the window reference is available
-	if (typeof window === "object") g = window;
-}
-
-// g can still be undefined, but nothing to do about it...
-// We return undefined, instead of nothing here, so it's
-// easier to handle this case. if(!global) { ...}
-
-module.exports = g;
-
-
-/***/ }),
-
-/***/ "./src/js/penn_starter.script.js":
-/*!***************************************!*\
-  !*** ./src/js/penn_starter.script.js ***!
-  \***************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var popper_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! popper.js */ "./node_modules/popper.js/dist/esm/popper.js");
-/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.js");
-/* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(bootstrap__WEBPACK_IMPORTED_MODULE_1__);
-
-
-/*
-(function ($) {
-  'use strict';
-
-
-  var searchToggle = $('#searchToggle');
-  var searchBar = $('#searchBar');
-  $(searchToggle).click(function () {
-    $(this).attr('aria-expanded', $(this).attr('aria-expanded') === 'false' ? 'true' : 'false');
-    $(searchBar).attr('aria-hidden', $(searchBar).attr('aria-hidden') === 'true' ? 'false' : 'true').toggleClass('opened');
-
-  });
-
-  // recaptcha a11y fix
-  var intervalID = window.setInterval(myCallback, 50);
-
-  function myCallback() {
-    var textAreaCheck = document.getElementsByClassName('g-recaptcha-response');
-    if (textAreaCheck.length > 0) {
-      $(textAreaCheck).attr('aria-labelledby', 'g-recaptcha-response');
-      console.log($(textAreaCheck));
-      clearInterval(intervalID);
-    }
-  }
-
-  // apply has-bg class to body when a landing page has a background image
-  if ($(".landing-page__field-background-image")[0]) {
-    $('body').addClass('has-bg');
-  }
-
-  // apply has-alert class to body when an alert is present
-  if ($(".bs-site-alert")[0]) {
-    $('body').addClass('has-alert');
-  }
-
-  // apply has-featured class to body when a featured view mode is present
-  if ($(".node--type-listing-page .listing-page__field-featured-content")[0]) {
-    $('body').addClass('has-featured');
-  }
-
-  var featuredDate = $(".featured-date-wrap").text().split(" ");
-  $(".featured-date-wrap").empty();
-  $.each(featuredDate, function (i, v) {
-    $(".featured-date-wrap").append($("<span>").text(v));
-  });
-  var featuredFlag = $("<span class='featured-flag'>Featured</span>");
-  if ($(".node--type-listing-page .listing-page__field-featured-content")[0]) {
-    $('.node--view-mode-featured > .bs-region--right').prepend(featuredFlag);
-  }
-
-  // apply external class to all external links
-  $('a').filter(function() {
-    return this.hostname && this.hostname !== location.hostname;
- }).append("<span class='external'><span class='sr-only'>(link is external)</span></span>");
-
-
-  $('.nav-item.dropdown')
-    .mouseover(function () {
-      clearTimeout(this.timer)
-      $(this).addClass('show');
-    })
-    .mouseleave(function () {
-      this.timer = setTimeout(function () {
-        $(this).removeClass('show');
-      }.bind(this), 500);
-    });
-
-  if ($(".dropdown").hasClass('show')) {
-    $('body').addClass('has-alert');
-  }
-
-  if ($(".nav-item.dropdown").hasClass('show')) (function () {
-
-    $(this).children('.dropdown-menu').removeAttr('tab-index');
-    console.log('hey');
-
-
-  });
-
-
-/*
-  Drupal.behaviors.mobileNav = {
-    attach: function (context, settings) {
-      $('body').once('event-bindings').each(function () {
-
-        function breakPointMods(x) {
-          if (breakpoint_mobile.matches) { // If media query matches
-            // Close menu on ESC
-            $(document).keyup(function (e) {
-              if (e.keyCode == 27) { // escape key maps to keycode `27`
-                $('.navbar-collapse').removeClass('show');
-                $('button.navbar-toggler').attr('aria-expanded', 'false');
-              }
-            });
-            // Close all navs when focus has left the menu
-            $('.navbar-collapse').focusout(function (e) {
-              $(this).removeClass('show');
-            });
-
-
-
-            var breakpoint_mobile = window.matchMedia("(max-width: 991px)")
-            breakPointMods(breakpoint_mobile) // Call listener function at run time
-            breakpoint_mobile.addListener(breakPointMods) // Attach listener function on state changes
-          }
-          
-        }
-
-        
-
-      });
-
-
-    }
-  };*/
-
-/*
-
-})(jQuery, Drupal);
-*/
-
-(function ($, Drupal, drupalSettings) {
-  Drupal.behaviors.mobileNavs = {
-    attach: function attach(context, settings) {
-      $('body').once('event-bindings').each(function () {
-        // Add mobileBreakpoint class to body so contained keyboard focus on menu only triggers when mobile menu is present
-        var handleMatchMedia = function handleMatchMedia(mediaQuery) {
-          if (mediaQuery.matches) {
-            $("body").addClass("mobileBreakpoint");
-          } else {
-            $("body").removeClass("mobileBreakpoint");
-          }
-        },
-            mql = window.matchMedia('all and (max-width: 991px)');
-
-        handleMatchMedia(mql);
-        mql.addListener(handleMatchMedia);
-        var searchToggle = $('#searchToggle');
-        var searchBar = $('#searchBar');
-        $(searchToggle).click(function () {
-          $(this).attr('aria-expanded', $(this).attr('aria-expanded') === 'false' ? 'true' : 'false');
-          $(searchBar).attr('aria-hidden', $(searchBar).attr('aria-hidden') === 'true' ? 'false' : 'true').toggleClass('opened'); // Close all navs when focus has left the menu
-        });
-      });
-    }
-  };
-  $('body').on('keydown', function (e) {
-    if (e.keyCode == 27) {
-      // escape key maps to keycode `27`
-      $('.mobileBreakpoint .navbar .navbar-collapse').removeClass('show');
-      $('.mobileBreakpoint .navbar-toggler').attr('aria-expanded', 'false');
-      $(searchToggle).attr('aria-expanded', 'false');
-      $(searchBar).attr('aria-hidden', 'true').removeClass('opened');
-    }
-  });
-  Drupal.behaviors.pageMods = {
-    attach: function attach(context, settings) {
-      $('body').once('page-load').each(function () {
-        // recaptcha a11y fix
-        var intervalID = window.setInterval(myCallback, 50);
-
-        function myCallback() {
-          var textAreaCheck = document.getElementsByClassName('g-recaptcha-response');
-
-          if (textAreaCheck.length > 0) {
-            $(textAreaCheck).attr('aria-labelledby', 'g-recaptcha-response');
-            console.log($(textAreaCheck));
-            clearInterval(intervalID);
-          }
-        } // apply has-bg class to body when a landing page has a background image
-
-
-        if ($(".landing-page__field-background-image")[0]) {
-          $('body').addClass('has-bg');
-        } // apply has-alert class to body when an alert is present
-
-
-        if ($(".bs-site-alert")[0]) {
-          $('body').addClass('has-alert');
-        } // apply has-featured class to body when a featured view mode is present
-
-
-        if ($(".node--type-listing-page .listing-page__field-featured-content")[0]) {
-          $('body').addClass('has-featured');
-        } // featured date
-
-
-        var featuredDate = $(".featured-date-wrap").text().split(" ");
-        $(".featured-date-wrap").empty();
-        $.each(featuredDate, function (i, v) {
-          $(".featured-date-wrap").append($("<span>").text(v));
-        });
-        var featuredFlag = $("<span class='featured-flag'>Featured</span>");
-
-        if ($(".node--type-listing-page .listing-page__field-featured-content")[0]) {
-          $('.node--view-mode-featured > .bs-region--right').prepend(featuredFlag);
-        } // apply external class to all external links
-
-
-        $('a').filter(function () {
-          return this.hostname && this.hostname !== location.hostname;
-        }).append("<span class='external'><span class='sr-only'>(link is external)</span></span>"); // apply labels on search page
-
-        if (window.location.href.indexOf("/search") > -1) {
-          $('#search-block-form > .form-item').prepend("<label class='sr-only' for='edit-keys--2'>Search the site:</label>");
-        } else {
-          $('#search-block-form > .form-item').prepend("<label class='sr-only' for='edit-keys'>Search the site:</label>");
-        }
-      });
-    }
-  };
-})(jQuery, Drupal, drupalSettings);
-
-/***/ }),
-
-/***/ "./src/sass/penn_starter.style.scss":
-/*!******************************************!*\
-  !*** ./src/sass/penn_starter.style.scss ***!
-  \******************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 0:
-/*!********************************************************************************!*\
-  !*** multi ./src/js/penn_starter.script.js ./src/sass/penn_starter.style.scss ***!
-  \********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(/*! /Users/gaulrapp/Sites/penn-d8-composer-starter/web/themes/custom/penn_starter/src/js/penn_starter.script.js */"./src/js/penn_starter.script.js");
-module.exports = __webpack_require__(/*! /Users/gaulrapp/Sites/penn-d8-composer-starter/web/themes/custom/penn_starter/src/sass/penn_starter.style.scss */"./src/sass/penn_starter.style.scss");
 
 
 /***/ })
 
-/******/ });
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/chunk loaded */
+/******/ 	(() => {
+/******/ 		var deferred = [];
+/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
+/******/ 			if(chunkIds) {
+/******/ 				priority = priority || 0;
+/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
+/******/ 				deferred[i] = [chunkIds, fn, priority];
+/******/ 				return;
+/******/ 			}
+/******/ 			var notFulfilled = Infinity;
+/******/ 			for (var i = 0; i < deferred.length; i++) {
+/******/ 				var [chunkIds, fn, priority] = deferred[i];
+/******/ 				var fulfilled = true;
+/******/ 				for (var j = 0; j < chunkIds.length; j++) {
+/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
+/******/ 						chunkIds.splice(j--, 1);
+/******/ 					} else {
+/******/ 						fulfilled = false;
+/******/ 						if(priority < notFulfilled) notFulfilled = priority;
+/******/ 					}
+/******/ 				}
+/******/ 				if(fulfilled) {
+/******/ 					deferred.splice(i--, 1)
+/******/ 					var r = fn();
+/******/ 					if (r !== undefined) result = r;
+/******/ 				}
+/******/ 			}
+/******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		// no baseURI
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"/js/penn_starter.script": 0,
+/******/ 			"css/penn_starter.style": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
+/******/ 		
+/******/ 		// install a JSONP callback for chunk loading
+/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
+/******/ 			var [chunkIds, moreModules, runtime] = data;
+/******/ 			// add "moreModules" to the modules object,
+/******/ 			// then flag all "chunkIds" as loaded and fire callback
+/******/ 			var moduleId, chunkId, i = 0;
+/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
+/******/ 				for(moduleId in moreModules) {
+/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 					}
+/******/ 				}
+/******/ 				if(runtime) var result = runtime(__webpack_require__);
+/******/ 			}
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			for(;i < chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 					installedChunks[chunkId][0]();
+/******/ 				}
+/******/ 				installedChunks[chunkIds[i]] = 0;
+/******/ 			}
+/******/ 			return __webpack_require__.O(result);
+/******/ 		}
+/******/ 		
+/******/ 		var chunkLoadingGlobal = self["webpackChunkpenn_starter"] = self["webpackChunkpenn_starter"] || [];
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
+/******/ 	__webpack_require__.O(undefined, ["css/penn_starter.style"], () => (__webpack_require__("./src/js/penn_starter.script.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/penn_starter.style"], () => (__webpack_require__("./src/sass/penn_starter.style.scss")))
+/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
+/******/ 	
+/******/ })()
+;
