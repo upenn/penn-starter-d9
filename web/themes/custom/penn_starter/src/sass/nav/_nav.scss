@@ -157,9 +157,13 @@
     .block--penn-starter-branding {
         @include make-xs-column(8);
         @include make-lg-column(5);
+        padding-left: 0;
     }
     .navbar-collapse {
         @include make-col(12);
+        .block--penn-starter-main-menu {
+            width: 100%;
+        }
         a {
             color: $primary;
             font-weight: 500;
@@ -301,11 +305,11 @@
             display: block;
         }
         > .container > .row {
-            width: 100%;
+            //width: 100%;
         }
         padding-bottom: 0;
         .block--penn-starter-branding {
-            padding-left: 0;
+           // padding-left: 0;
         }
         .navbar-brand {
             a {
@@ -350,9 +354,11 @@
         }
         .navbar-collapse {
             justify-content: flex-start;
-            margin-top: 2px;
+            margin-top: 5px;
         }
         .navbar-nav {
+            justify-content: space-between;
+            flex-direction: row;
             .nav-item {
                 position: static;
                 
@@ -520,7 +526,7 @@
             }
         }
         .navbar-collapse {
-            margin-top: -32px;
+           // margin-top: -32px;
             justify-content: flex-end;
 
         }

@@ -53,10 +53,12 @@
           {% else %}
             {{ link(item.title, item.url, { 'class': nav_link_classes }) }}
           {% endif %}
+          </div>
         </li>
       {% endfor %}
     {% endblock %}
   </ul>
+
   </div>
 {% endif %}
 
