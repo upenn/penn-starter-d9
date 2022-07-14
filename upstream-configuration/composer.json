@@ -38,7 +38,9 @@
         "drupal/time_field": "^2.0",
         "drupal/ds": "^3.13",
         "drupal/default_content": "^2.0@alpha",
-        "drupal/mysql56": "^1.4"
+        "drupal/mysql56": "^1.4",
+        "drupal/pathauto": "^1.10",
+        "drupal/webform": "^6.1"
     },
     "conflict": {
         "symfony/http-foundation": "3.4.24"
