@@ -5,6 +5,10 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "git",
+            "url": "https://github.com/upenn/penn403.git"
         }
     ],
     
@@ -40,7 +44,8 @@
         "drupal/default_content": "^2.0@alpha",
         "drupal/mysql56": "^1.4",
         "drupal/pathauto": "^1.10",
-        "drupal/webform": "^6.1"
+        "drupal/webform": "^6.1",
+        "upenn/penn403": "dev-d8"
     },
     "conflict": {
         "symfony/http-foundation": "3.4.24"
