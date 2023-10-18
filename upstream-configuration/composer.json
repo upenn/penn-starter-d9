@@ -17,7 +17,6 @@
         "drupal/smtp": "^1.0",
         "drupal/twig_field_value": "^2.0",
         "drupal/twig_tweak": "^3.0",
-        "drupal/viewsreference": "^2.*",
         "drupal/adminimal_admin_toolbar": "^1.11",
         "drupal/adminimal_theme": "^1.6",
         "drupal/better_exposed_filters": "^5.0@beta",
@@ -40,7 +39,8 @@
         "drupal/default_content": "^2.0@alpha",
         "drupal/mysql56": "^1.4",
         "drupal/pathauto": "^1.10",
-        "drupal/webform": "^6.1"
+        "drupal/webform": "^6.1",
+        "drupal/viewsreference": "2.x-dev@dev"
     },
     "conflict": {
         "symfony/http-foundation": "3.4.24"
