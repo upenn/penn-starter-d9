@@ -41,6 +41,7 @@
         "drupal/pathauto": "^1.10",
         "drupal/webform": "^6.1",
         "drupal/viewsreference": "2.x-dev@dev"
+        "drupal/google_analytics": "^4.0"
     },
     "conflict": {
         "symfony/http-foundation": "3.4.24"
