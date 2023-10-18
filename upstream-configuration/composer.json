@@ -17,7 +17,7 @@
         "drupal/smtp": "^1.0",
         "drupal/twig_field_value": "^2.0",
         "drupal/twig_tweak": "^3.0",
-        "drupal/viewsreference": "^1.7",
+        "drupal/viewsreference": "^2.*",
         "drupal/adminimal_admin_toolbar": "^1.11",
         "drupal/adminimal_theme": "^1.6",
         "drupal/better_exposed_filters": "^5.0@beta",
