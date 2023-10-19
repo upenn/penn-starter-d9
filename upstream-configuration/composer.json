@@ -32,7 +32,7 @@
         "drupal/structure_sync": "^2.0",
         "drupal/menu_block": "^1.8",
         "drupal/addtocal": "^2.0@beta",
-        "drupal/editoria11y": "^1.0",
+        "drupal/editoria11y": "^2.1",
         "drupal/social_media_links": "^2.8",
         "drupal/time_field": "^2.0",
         "drupal/ds": "^3.13",
@@ -40,7 +40,7 @@
         "drupal/mysql56": "^1.4",
         "drupal/pathauto": "^1.10",
         "drupal/webform": "^6.1",
-        "drupal/viewsreference": "2.x-dev@dev"
+        "drupal/viewsreference": "2.x-dev@dev",
         "drupal/google_analytics": "^4.0"
     },
     "conflict": {
